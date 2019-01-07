@@ -1,0 +1,28 @@
+{
+  "name": "githubsearchnative",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "test": "jest",
+    "preparedeps": "cd ../../node_modules/@callstack/async-storage && yarn install",
+    "prepareadb": "adb reverse tcp:8081 tcp:8081",
+    "prepare": "yarn run preparedeps && yarn run prepareadb",
+    "start": "yarn run prepare && yarn run haul --platform android"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.2.0",
+    "react": "16.6.3",
+    "react-native": "0.57.8",
+    "react-redux": "^6.0.0"
+  },
+  "devDependencies": {
+    "babel-jest": "23.6.0",
+    "haul": "^1.0.0-rc.10",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "0.51.1",
+    "react-test-renderer": "16.6.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

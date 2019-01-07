@@ -1,0 +1,16 @@
+{
+  "name": "github-search",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "start:web": "cd packages/web && yarn start",
+    "start:native": "cd packages/native && yarn start"
+  }
+}
